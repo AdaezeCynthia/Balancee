@@ -43,7 +43,7 @@ export const statisticsCardsData = [
     color: "gray",
     icon: BanknotesIcon,
     title: "Total Cashback",
-    value: " ₦15,000",
+    value: " ₦12,600",
     footer: {
       color: "text-green-500",
       value: "+2%",

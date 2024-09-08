@@ -1,10 +1,7 @@
 import {
   HomeIcon,
-  UserCircleIcon,
   TableCellsIcon,
-  InformationCircleIcon,
-  ServerStackIcon,
-  RectangleStackIcon,
+  CogIcon,
 } from "@heroicons/react/24/solid";
 import { Reward, History,  } from "@/pages/dashboard";
 
@@ -34,18 +31,18 @@ export const routes = [
     ],
   },
   {
-    title: "auth pages",
+    title: "Repair",
     layout: "auth",
     pages: [
       {
-        icon: <ServerStackIcon {...icon} />,
-        name: "sign in",
+        icon: <CogIcon {...icon} />,
+        name: "Book Repair at station",
         path: "",
         element: "",
       },
       {
-        icon: <RectangleStackIcon {...icon} />,
-        name: "sign up",
+        icon: <CogIcon {...icon} />,
+        name: "Book Repair",
         path: "  ",
         element: "",
       },
