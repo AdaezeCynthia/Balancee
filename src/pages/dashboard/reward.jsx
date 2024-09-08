@@ -37,9 +37,12 @@ export function Reward() {
             icon={React.createElement(icon, {
               className: "w-6 h-6 text-white",
             })}
+            
             footer={
-              <Typography className="font-normal font-sans text-blue-gray-600">
+
+           <Typography className="font-normal font-sans text-blue-gray-600">
                  {title === "Total Cashback" && (
+                  
                   <button
                     className="my-[-1px] px-4 py-[5px]  bg-customBlue text-white absolute text-[10px] right-[15px]
                      font-bold  font-sans rounded-[20px] hover:bg-blue-400"
@@ -51,6 +54,8 @@ export function Reward() {
                 &nbsp;{footer.label}
               </Typography>
             }
+
+
           />
         ))}
       </div>
@@ -66,6 +71,18 @@ export function Reward() {
             className="m-0 flex items-center justify-between p-6"
           >
             <div>
+
+
+
+
+
+
+
+
+
+
+
+              
               <Typography variant="h6"  className="mb-1 ">
                 Cashback History
               </Typography>
