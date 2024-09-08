@@ -87,18 +87,14 @@ export function Reward() {
                   />
                 </IconButton>
               </MenuHandler>
-              <MenuList>
-                <MenuItem>Action</MenuItem>
-                <MenuItem>Another Action</MenuItem>
-                <MenuItem>Something else here</MenuItem>
-              </MenuList>
+             
             </Menu>
           </CardHeader>
           <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
             <table className="w-full min-w-[640px] table-auto">
               <thead>
                 <tr>
-                  {["date", "order", "amount", "cashback %"].map(
+                  {["date", "order id", "amount", "cashback %"].map(
                     (el) => (
                       <th
                         key={el}

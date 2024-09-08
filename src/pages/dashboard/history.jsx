@@ -114,7 +114,7 @@ export function History() {
           <table className="w-full min-w-[640px] table-auto">
             <thead>
               <tr>
-                {["date", "order", "amount", "cashback %", ""].map(
+                {["date", "order id", "amount", "cashback %", ""].map(
                   (el) => (
                     <th
                       key={el}
