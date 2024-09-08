@@ -1,35 +1,30 @@
 export const reviewTableData = [
   {
-
-    name: "Ede John",
-    artisan: [
-      { img: "/img/team-1.jpeg", name: "Romina Hadid" },
-      
-    ],
-    amount: "₦140,000",
+    id: "1",
+    name: "23rd April 2024",
+    order: [{ id: "#7843120" }],
+    amount: "₦6,000",
     rate: 60,
   },
   {
-
-    name: "Ali Musa",
-    artisan: [
-      { img: "/img/team-2.jpeg", name: "Ryan Tompson" },
-     
-    ],
-    amount: "₦30,000",
+    id: "2",
+    name: "18th April 2024",
+    order: [{ id: "#6754120" }],
+    amount: "₦5,000",
     rate: 50,
   },
   {
-  
-    name: "Ade Femi",
-    artisan: [
-      { img: "/img/team-3.jpeg", name: "Jessica Doe" },
-      
-    ],
-    amount: "₦6,000",
-     rate: 40,
+    id: "3",
+    name: "20th May 2024",
+    order: [{ id: "#7849865" }],
+    amount: "₦4,000",
+    rate: 40,
   },
- 
+  {
+    id: "4",
+    name: "25th May 2024",
+    order: [{ id: "#7894561" }],
+    amount: "₦7,000",
+    rate: 70,
+  },
 ];
-
-export default reviewTableData;

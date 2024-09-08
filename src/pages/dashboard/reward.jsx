@@ -98,7 +98,7 @@ export function Reward() {
             <table className="w-full min-w-[640px] table-auto">
               <thead>
                 <tr>
-                  {["name", "artisan", "amount", "cashback %"].map(
+                  {["date", "order", "amount", "cashback %"].map(
                     (el) => (
                       <th
                         key={el}
@@ -115,71 +115,86 @@ export function Reward() {
                   )}
                 </tr>
               </thead>
+           
+
+
+
+
+
+
+
+
               <tbody>
-                {reviewTableData.map(
-                  ({ img, name, artisan, amount, rate }, key) => {
-                    const className = `py-3 px-5 ${
-                      key === reviewTableData.length - 1
-                        ? ""
-                        : "border-b border-blue-gray-50"
-                    }`;
+  {reviewTableData.map(({ id, name, order, amount, rate }) => {
+    const className = `py-3 px-5 ${
+      reviewTableData.indexOf({ id, name, order, amount, rate }) === reviewTableData.length - 1
+        ? ""
+        : "border-b border-blue-gray-50"
+    }`;
 
-                    return (
-                      <tr key={name}>
-                        <td className={className}>
-                          <div className="flex items-center gap-4">
-                            <Typography
-                              variant="small"
-                              color="blue-gray"
-                              className="font-bold font-sans"
-                            >
-                              {name}
-                            </Typography>
-                          </div>
-                        </td>
-                        <td className={className}>
-                          {artisan .map(({ img, name }, key) => (
-                            <Tooltip key={name} content={name}>
-                              <Avatar
-                                src={img}
-                                alt={name}
-                                size="xs"
-                                variant="circular"
-                                className={`cursor-pointer border-2 border-white ${
-                                  key === 0 ? "" : "-ml-2.5"
-                                }`}
-                              />
-                            </Tooltip>
-                          ))}
-                        </td>
-                        <td className={className}>
-                          <Typography
-                            variant="small"
-                            className="text-xs font-medium font-sans text-blue-gray-600"
-                          >
-                            {amount}
-                          </Typography>
-                        </td>
-                        <td className={className}>
-                        <Typography
-  variant="small"
-  className="mb-1 block text-xs font-sans font-medium text-blue-gray-600"
->
-  {rate}%
-</Typography>
-<div className="relative h-1 bg-gray-200 rounded-full">
-  <div
-    className={`absolute top-0 left-0 h-full rounded-full ${rate === 100 ? 'bg-customBlue' : 'bg-customBlue'}`} 
-    style={{ width: `${rate}%` }}
-  />
-</div>
+    return (
+      <tr key={id}>
+        <td className={className}>
+          <div className="flex items-center gap-4">
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="font-bold font-sans"
+            >
+              {name}
+            </Typography>
+          </div>
+        </td>
+        <td className={className}>
+          {order.map(({ id: orderId }) => (
+            <Tooltip key={orderId} content={`ID: ${orderId}`} placement="top">
+              <span className="text-blue-gray-600 font-sans cursor-pointer">{orderId}</span>
+            </Tooltip>
+          ))}
+        </td>
+        <td className={className}>
+          <Typography
+            variant="small"
+            className="text-xs font-medium font-sans text-blue-gray-600"
+          >
+            {amount}
+          </Typography>
+        </td>
+        <td className={className}>
+          <Typography
+            variant="small"
+            className="mb-1 block text-xs font-sans font-medium text-blue-gray-600"
+          >
+            {rate}%
+          </Typography>
+          <div className="relative h-1 bg-gray-200 rounded-full">
+            <div
+              className={`absolute top-0 left-0 h-full rounded-full ${
+                rate === 100 ? 'bg-customBlue' : 'bg-customBlue'
+              }`}
+              style={{ width: `${rate}%` }}
+            />
+          </div>
+        </td>
+      </tr>
+    );
+  })}
+</tbody>
 
-                        </td>
-                      </tr>
-                    );
-                  }
-                )}
-              </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </table>
           </CardBody>
         </Card>
@@ -191,7 +206,7 @@ export function Reward() {
             className="m-0 p-6"
           >
             <Typography variant="h6" color="blue-gray" className="mb-2">
-              Orders Overview
+              Earning Overview
             </Typography>
             <Typography
               variant="small"
